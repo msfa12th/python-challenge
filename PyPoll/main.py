@@ -86,13 +86,14 @@ print("---------------------------------------------")
 print(f'Total Votes: {totalVotes}')
 print("---------------------------------------------")
 
-for candidate, votes, pctVotes in electionResults:
-    print('{}: {:.2%}  ({})'.format(candidate,pctVotes,votes))
-    if votes == winningTally:
-        winningCandidate = candidate
+# problem printing tuple to file so use original list for print to file
+for i in range(numCandidates):
+    print('{}: {:.2%}  ({})'.format(candidateNames[i],candidatePercentVote[i],candidateTally[i]))
+        
 
 print("---------------------------------------------")
 print(f'Winner: {winningCandidate}')
 print("---------------------------------------------")
 print("   ")
+
 
